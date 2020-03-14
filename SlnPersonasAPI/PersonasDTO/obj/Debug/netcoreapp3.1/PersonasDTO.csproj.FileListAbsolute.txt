@@ -1,0 +1,8 @@
+C:\Users\vallejog\source\repos\SlnPersonasAPI\PersonasDTO\bin\Debug\netcoreapp3.1\PersonasDTO.deps.json
+C:\Users\vallejog\source\repos\SlnPersonasAPI\PersonasDTO\bin\Debug\netcoreapp3.1\PersonasDTO.dll
+C:\Users\vallejog\source\repos\SlnPersonasAPI\PersonasDTO\obj\Debug\netcoreapp3.1\PersonasDTO.csprojAssemblyReference.cache
+C:\Users\vallejog\source\repos\SlnPersonasAPI\PersonasDTO\obj\Debug\netcoreapp3.1\PersonasDTO.AssemblyInfoInputs.cache
+C:\Users\vallejog\source\repos\SlnPersonasAPI\PersonasDTO\obj\Debug\netcoreapp3.1\PersonasDTO.AssemblyInfo.cs
+C:\Users\vallejog\source\repos\SlnPersonasAPI\PersonasDTO\bin\Debug\netcoreapp3.1\PersonasDTO.pdb
+C:\Users\vallejog\source\repos\SlnPersonasAPI\PersonasDTO\obj\Debug\netcoreapp3.1\PersonasDTO.dll
+C:\Users\vallejog\source\repos\SlnPersonasAPI\PersonasDTO\obj\Debug\netcoreapp3.1\PersonasDTO.pdb

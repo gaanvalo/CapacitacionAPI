@@ -1,0 +1,11 @@
+C:\Users\vallejog\source\repos\SlnPersonasAPI\PersonasDAL\bin\Debug\netcoreapp3.1\PersonasDAL.deps.json
+C:\Users\vallejog\source\repos\SlnPersonasAPI\PersonasDAL\bin\Debug\netcoreapp3.1\PersonasDAL.dll
+C:\Users\vallejog\source\repos\SlnPersonasAPI\PersonasDAL\obj\Debug\netcoreapp3.1\PersonasDAL.csprojAssemblyReference.cache
+C:\Users\vallejog\source\repos\SlnPersonasAPI\PersonasDAL\obj\Debug\netcoreapp3.1\PersonasDAL.AssemblyInfoInputs.cache
+C:\Users\vallejog\source\repos\SlnPersonasAPI\PersonasDAL\obj\Debug\netcoreapp3.1\PersonasDAL.AssemblyInfo.cs
+C:\Users\vallejog\source\repos\SlnPersonasAPI\PersonasDAL\bin\Debug\netcoreapp3.1\PersonasDAL.pdb
+C:\Users\vallejog\source\repos\SlnPersonasAPI\PersonasDAL\bin\Debug\netcoreapp3.1\PersonasDTO.dll
+C:\Users\vallejog\source\repos\SlnPersonasAPI\PersonasDAL\bin\Debug\netcoreapp3.1\PersonasDTO.pdb
+C:\Users\vallejog\source\repos\SlnPersonasAPI\PersonasDAL\obj\Debug\netcoreapp3.1\PersonasDAL.csproj.CopyComplete
+C:\Users\vallejog\source\repos\SlnPersonasAPI\PersonasDAL\obj\Debug\netcoreapp3.1\PersonasDAL.dll
+C:\Users\vallejog\source\repos\SlnPersonasAPI\PersonasDAL\obj\Debug\netcoreapp3.1\PersonasDAL.pdb
