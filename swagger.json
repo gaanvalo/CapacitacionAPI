@@ -1,0 +1,184 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "Permite Realizar un mantenimiento de Personas",
+    "version" : "1.0.0",
+    "title" : "Personas API",
+    "contact" : {
+      "email" : "Gabriel.vallejo@Unisys.com"
+    },
+    "license" : {
+      "name" : "Apache 2.0",
+      "url" : "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "host" : "virtserver.swaggerhub.com",
+  "basePath" : "/CapacitaDavivienda/PersonasAPI/1.0.0",
+  "schemes" : [ "https", "http" ],
+  "paths" : {
+    "/personas/" : {
+      "get" : {
+        "tags" : [ "PersonasAPI" ],
+        "summary" : "Consulta todas las personas",
+        "description" : "Consulta todos los registros de personas",
+        "operationId" : "searchPersonas",
+        "produces" : [ "application/json" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "resultados de la busqueda",
+            "schema" : {
+              "$ref" : "#/definitions/RespuestaList"
+            }
+          },
+          "400" : {
+            "description" : "bad input parameter"
+          }
+        }
+      }
+    },
+    "/personas/{id}" : {
+      "get" : {
+        "tags" : [ "PersonasAPI" ],
+        "summary" : "Consulta persona por Id",
+        "description" : "Consulta todos los registros de personas",
+        "operationId" : "searchPersonasById",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "description" : "Id registrado de la persona en base de datos",
+          "required" : true,
+          "type" : "integer"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "resultados de la busqueda",
+            "schema" : {
+              "$ref" : "#/definitions/RespuestaObject"
+            }
+          },
+          "400" : {
+            "description" : "bad input parameter"
+          }
+        }
+      }
+    },
+    "/personas" : {
+      "post" : {
+        "tags" : [ "PersonasAPI" ],
+        "summary" : "add Personas",
+        "description" : "Agrega registros de personas al sistema",
+        "operationId" : "addPersonas",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "PersonasItem",
+          "description" : "Personas a registra",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/PersonaItem"
+          }
+        } ],
+        "responses" : {
+          "201" : {
+            "description" : "Insercion Exitosa",
+            "schema" : {
+              "$ref" : "#/definitions/Respuesta"
+            }
+          },
+          "400" : {
+            "description" : "invalid input, object invalid"
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "PersonaItem" : {
+      "type" : "object",
+      "required" : [ "LastName", "MiddleName", "id" ],
+      "properties" : {
+        "id" : {
+          "type" : "integer",
+          "example" : 12,
+          "description" : "Campo identificacion de registro"
+        },
+        "FirtName" : {
+          "type" : "string",
+          "example" : "Ken",
+          "description" : "Primer Nombre"
+        },
+        "MiddleName" : {
+          "type" : "string",
+          "example" : "S",
+          "description" : "Segundo Nombre"
+        },
+        "LastName" : {
+          "type" : "string",
+          "example" : "Masters",
+          "description" : "Apellido"
+        }
+      }
+    },
+    "Respuesta" : {
+      "type" : "object",
+      "properties" : {
+        "statusCode" : {
+          "type" : "string",
+          "example" : "000",
+          "description" : "Identificador del proceso"
+        },
+        "statusDesc" : {
+          "type" : "string",
+          "example" : "Transacción exitosa",
+          "description" : "Descripción del proceso"
+        },
+        "Afectados" : {
+          "type" : "integer",
+          "example" : 10
+        }
+      }
+    },
+    "RespuestaObject" : {
+      "type" : "object",
+      "properties" : {
+        "statusCode" : {
+          "type" : "string",
+          "example" : "000",
+          "description" : "Identificador de la consulta"
+        },
+        "statusDesc" : {
+          "type" : "string",
+          "example" : "Consulta Exitosa",
+          "description" : "descripcion del mensaje"
+        },
+        "ObjPersona" : {
+          "$ref" : "#/definitions/PersonaItem"
+        }
+      }
+    },
+    "RespuestaList" : {
+      "type" : "object",
+      "properties" : {
+        "statusCode" : {
+          "type" : "string",
+          "example" : "000",
+          "description" : "Identificador del proceso"
+        },
+        "statusDesc" : {
+          "type" : "string",
+          "example" : "Transacción exitosa",
+          "description" : "Descripción del proceso"
+        },
+        "ListPersonas" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/PersonaItem"
+          }
+        }
+      }
+    }
+  }
+}
