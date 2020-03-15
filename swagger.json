@@ -28,7 +28,7 @@
           "200" : {
             "description" : "resultados de la busqueda",
             "schema" : {
-              "type" : "object"
+              "$ref" : "#/definitions/RespuestaList"
             }
           },
           "400" : {
@@ -55,7 +55,7 @@
           "200" : {
             "description" : "resultados de la busqueda",
             "schema" : {
-              "$ref" : "#/definitions/Respuesta"
+              "$ref" : "#/definitions/RespuestaObject"
             }
           },
           "400" : {
@@ -82,7 +82,7 @@
           }
         } ],
         "responses" : {
-          "200" : {
+          "201" : {
             "description" : "Insercion Exitosa",
             "schema" : {
               "$ref" : "#/definitions/Respuesta"
@@ -105,7 +105,7 @@
           "example" : 12,
           "description" : "Campo identificacion de registro"
         },
-        "firtName" : {
+        "FirtName" : {
           "type" : "string",
           "example" : "Ken",
           "description" : "Primer Nombre"
@@ -134,9 +134,51 @@
           "type" : "string",
           "example" : "Transacción exitosa",
           "description" : "Descripción del proceso"
+        },
+        "Afectados" : {
+          "type" : "integer",
+          "example" : 10
+        }
+      }
+    },
+    "RespuestaObject" : {
+      "type" : "object",
+      "properties" : {
+        "statusCode" : {
+          "type" : "string",
+          "example" : "000",
+          "description" : "Identificador de la consulta"
+        },
+        "statusDesc" : {
+          "type" : "string",
+          "example" : "Consulta Exitosa",
+          "description" : "descripcion del mensaje"
+        },
+        "ObjPersona" : {
+          "$ref" : "#/definitions/PersonaItem"
+        }
+      }
+    },
+    "RespuestaList" : {
+      "type" : "object",
+      "properties" : {
+        "statusCode" : {
+          "type" : "string",
+          "example" : "000",
+          "description" : "Identificador del proceso"
+        },
+        "statusDesc" : {
+          "type" : "string",
+          "example" : "Transacción exitosa",
+          "description" : "Descripción del proceso"
+        },
+        "ListPersonas" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/PersonaItem"
+          }
         }
       }
     }
-    
   }
 }
