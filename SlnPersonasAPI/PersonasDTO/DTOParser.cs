@@ -28,11 +28,6 @@ namespace PersonasDTO
         /// <param name="reader">Lecto de consultas de oracle</param>
         public abstract void PopulateOrdinals(SqlDataReader reader);
 
-        /// <summary>
-        /// Metodo Para Llenar los objetos segun 
-        /// </summary>
-        /// <param name="parameters"></param>
-        /// <returns></returns>
-        public abstract CommonBase PopulateDTO(SqlParameterCollection parameters);
+    
     }
 }

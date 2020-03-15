@@ -5,7 +5,7 @@ using System.Text;
 
 namespace PersonasDTO.DTOs
 {
-    public class Respuesta
+    public class Respuesta: CommonBase
     {
         /// <summary>
         /// Identificador de error de TM Corresponsal
