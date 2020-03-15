@@ -1,5 +1,5 @@
 ﻿using PersonasDTO;
-//using PersonasDTO.DTOParsers;
+using PersonasDTO.DTOParsers;
 using System;
 
 
@@ -14,8 +14,10 @@ namespace PersonasDAL
                 /*************************************************
                  *         PONER EN ORDEN ALFABETICA             *
                  ************************************************/
-                //case "Calidad":
-                //    return new DTOParserCalidad();
+                case "PersonaItem":
+                    return new DTOParserPersona();
+                case "Respuesta":
+                    return new DTOParserRespuesta();
 
             }
             throw new Exception("Tipo del DTO desconocido."); //GENERA LA EXCEPCION. 
